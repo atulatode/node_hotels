@@ -84,6 +84,7 @@ router.post('/updatePerson', async (req, res) => {
   });
 });
 
+//by params
 router.get('/findPersonById/:id', async (req,res) => {
   try{
     const personId = req.params.id;
