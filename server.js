@@ -9,6 +9,8 @@ const validator = require('./helpers/validate');
 const personRoutes = require('./routes/personRoutes');
 //use the router
 app.use('/',personRoutes);
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
 
 // app.get('/getIdliDetails', function (req, res) {
 //   var customizedIdli = {
@@ -22,7 +24,6 @@ app.use('/',personRoutes);
 // })
 
 
-
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server is listening on port 3000')
 })
